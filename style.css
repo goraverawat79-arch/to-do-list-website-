@@ -29,6 +29,7 @@ background: linear-gradient(135deg, #3F8EFC, #ADD7F6);
 }
 
 .todo-app h2{
+    font-weight: 800;
     color: #002765;
     display: flex;
     justify-content: center;
