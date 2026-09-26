@@ -40,3 +40,33 @@ function showdata(){
 
 showdata();
 
+
+// update the progress bar // 
+
+function updateProgress() {
+
+    // Get all tasks
+    const totalTasks = listcontainer.querySelectorAll("li").length;
+
+    // Get completed tasks
+    const completedTasks =
+        listcontainer.querySelectorAll("li.checked").length;
+
+    // Calculate percentage
+    let percentage = 0;
+
+    if (totalTasks > 0) {
+        percentage = Math.round(
+            (completedTasks / totalTasks) * 100
+        );
+    }
+
+    // Update percentage text
+    document.getElementById("progress-text").textContent =
+        percentage + "%";
+
+    // Update progress bar
+    document.getElementById("progress-fill").style.width =
+        percentage + "%";
+}
+
